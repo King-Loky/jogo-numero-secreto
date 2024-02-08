@@ -8,8 +8,8 @@ function exibirNaTela(tag, texto) {
 function exibirMensagemInicial() {
     exibirNaTela('h1', 'Jogo do número secreto');
     exibirNaTela('p', 'Escolha um número entre 1 e 10');
-}
-
+    }
+    
 exibirMensagemInicial();
 
 // variaveis
