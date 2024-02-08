@@ -13,19 +13,19 @@ function exibirMensagemInicial() {
 exibirMensagemInicial();
 
 // variaveis
-let listaDeNumeroAleatorio = [];
+let listaDeNumeroAleatorioUsados = [];
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativa = 1;
 
 // funçõa para gerar números aleatorios, e junto com a lista para impedir a repetição de números
 function gerarNumeroAleatorio() {
     let numeroEscolhido =  parseInt(Math.random() * 10 + 1);
-    if (listaDeNumeroAleatorio.length == 10) {
-        listaDeNumeroAleatorio = [];
-    } if (listaDeNumeroAleatorio.includes(numeroEscolhido)) {
+    if (listaDeNumeroAleatorioUsados.length == 10) {
+        listaDeNumeroAleatorioUsados = [];
+    } if (listaDeNumeroAleatorioUsados.includes(numeroEscolhido)) {
         return gerarNumeroAleatorio();
     } else {
-        listaDeNumeroAleatorio.push(numeroEscolhido);
+        listaDeNumeroAleatorioUsados.push(numeroEscolhido);
         return numeroEscolhido;
     }     
 }
